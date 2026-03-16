@@ -8,8 +8,9 @@ import HeroSection from "./components/HeroSection";
 import LeadMagnetSection from "./components/LeadMagnetSection";
 import MentorshipSection from "./components/MentorshipSection";
 import Navbar from "./components/Navbar";
+import StickyBottomCTA from "./components/StickyBottomCTA";
+import TestimonialsSection from "./components/TestimonialsSection";
 
-// Procurement Wala - Professional Procurement Mentorship Website
 export default function App() {
   return (
     <div className="min-h-screen font-body">
@@ -21,9 +22,11 @@ export default function App() {
         <MentorshipSection />
         <BlogSection />
         <LeadMagnetSection />
+        <TestimonialsSection />
         <ContactSection />
       </main>
       <Footer />
+      <StickyBottomCTA />
       <Toaster richColors position="top-right" />
     </div>
   );

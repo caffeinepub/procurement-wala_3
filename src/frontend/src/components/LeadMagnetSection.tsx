@@ -23,6 +23,7 @@ const insideItems = [
 export default function LeadMagnetSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -52,7 +53,6 @@ export default function LeadMagnetSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -75,7 +75,6 @@ export default function LeadMagnetSection() {
               negotiation tips, and a ready-to-use task checklist. Completely
               free.
             </p>
-
             <div className="space-y-3">
               <p className="font-semibold text-foreground text-sm uppercase tracking-wide">
                 What&apos;s Inside:
@@ -93,7 +92,6 @@ export default function LeadMagnetSection() {
             </div>
           </motion.div>
 
-          {/* Right: form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -134,6 +132,22 @@ export default function LeadMagnetSection() {
                     placeholder="you@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    className="mt-1.5"
+                    data-ocid="guide.input"
+                  />
+                </div>
+                <div>
+                  <Label
+                    htmlFor="guide-company"
+                    className="text-sm font-medium text-foreground"
+                  >
+                    Company (optional)
+                  </Label>
+                  <Input
+                    id="guide-company"
+                    placeholder="e.g. Tata Consultancy Services"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
                     className="mt-1.5"
                     data-ocid="guide.input"
                   />

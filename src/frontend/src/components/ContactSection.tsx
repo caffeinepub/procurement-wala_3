@@ -46,7 +46,6 @@ export default function ContactSection() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left: contact info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -57,7 +56,6 @@ export default function ContactSection() {
               Ready to transform your procurement career or team? Reach out and
               let&apos;s talk.
             </p>
-
             <div className="space-y-5">
               <a
                 href="https://wa.me/919818469795"
@@ -75,7 +73,6 @@ export default function ContactSection() {
                   </div>
                 </div>
               </a>
-
               <a
                 href="https://www.linkedin.com/in/ravinderkapoor"
                 target="_blank"
@@ -92,7 +89,6 @@ export default function ContactSection() {
                   </div>
                 </div>
               </a>
-
               <a
                 href="mailto:ravinder@procurementwala.com"
                 className="flex items-center gap-4 group"
@@ -110,7 +106,6 @@ export default function ContactSection() {
             </div>
           </motion.div>
 
-          {/* Right: form */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -181,6 +176,9 @@ export default function ContactSection() {
                 <Send className="w-4 h-4 mr-2" />
                 {submitting ? "Sending..." : "Send Message"}
               </Button>
+              <p className="text-xs text-center text-muted-foreground">
+                Ravinder will personally respond within 24 hours.
+              </p>
             </form>
           </motion.div>
         </div>
