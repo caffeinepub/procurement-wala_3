@@ -9,6 +9,7 @@ import LeadMagnetSection from "./components/LeadMagnetSection";
 import MentorshipSection from "./components/MentorshipSection";
 import Navbar from "./components/Navbar";
 
+// Procurement Wala - Professional Procurement Mentorship Website
 export default function App() {
   return (
     <div className="min-h-screen font-body">
