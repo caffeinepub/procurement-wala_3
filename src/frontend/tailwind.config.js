@@ -78,7 +78,8 @@ export default {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgba(0,0,0,0.05)",
-        aqua: "0 0 0 3px oklch(0.78 0.14 185 / 0.25)",
+        gold: "0 0 0 3px oklch(0.75 0.15 75 / 0.25)",
+        navy: "0 4px 24px 0 oklch(0.28 0.08 255 / 0.18)",
       },
       keyframes: {
         "accordion-down": {

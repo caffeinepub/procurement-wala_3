@@ -2,7 +2,7 @@ import { Heart, Linkedin, MessageCircle } from "lucide-react";
 
 const footerLinks = [
   { label: "About", href: "#about" },
-  { label: "Book", href: "#book" },
+  { label: "Programs", href: "#programs" },
   { label: "Mentorship", href: "#mentorship" },
   { label: "Blog", href: "#blog" },
   { label: "Contact", href: "#contact" },
@@ -22,8 +22,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-10">
           {/* Brand */}
           <div>
-            <div className="font-display text-2xl font-bold mb-3">
-              Procurement <span className="text-primary">Wala</span>
+            <div className="font-display text-2xl font-bold mb-1 tracking-wide">
+              PROCUREMENT <span className="text-accent">WALA</span>
+            </div>
+            <div className="text-sm text-primary-foreground/50 italic mb-3">
+              by Ravinder Kapoor
             </div>
             <p className="text-sm text-primary-foreground/60 leading-relaxed">
               Empowering procurement professionals with 37 years of
@@ -42,7 +45,7 @@ export default function Footer() {
                   <a
                     href={link.href}
                     data-ocid="footer.link"
-                    className="text-sm text-primary-foreground/60 hover:text-primary transition-colors"
+                    className="text-sm text-primary-foreground/60 hover:text-accent transition-colors"
                   >
                     {link.label}
                   </a>
@@ -61,7 +64,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/ravinderkapoor"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary/30 transition-colors"
+                className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent/30 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
@@ -70,7 +73,7 @@ export default function Footer() {
                 href="https://wa.me/919818469795"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary/30 transition-colors"
+                className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent/30 transition-colors"
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" />
@@ -90,7 +93,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="text-sm text-primary-foreground/40 hover:text-primary-foreground/70 transition-colors flex items-center gap-1"
           >
-            Built with <Heart className="w-3 h-3 text-primary" /> using
+            Built with <Heart className="w-3 h-3 text-accent" /> using
             caffeine.ai
           </a>
         </div>

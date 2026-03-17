@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Linkedin, Mail, MessageCircle, Send } from "lucide-react";
+import { Linkedin, Mail, MessageCircle, Phone, Send } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -30,7 +30,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-muted py-20 md:py-28">
+    <section id="contact" className="bg-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,10 +39,17 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
+          <p className="text-sm font-semibold tracking-widest uppercase text-accent mb-2">
+            Let&apos;s Connect
+          </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             Get in Touch
           </h2>
-          <div className="w-16 h-1 bg-primary rounded-full mx-auto" />
+          <div className="flex items-center justify-center gap-2">
+            <div className="h-0.5 w-8 bg-accent" />
+            <div className="h-1.5 w-1.5 rounded-full bg-accent" />
+            <div className="h-0.5 w-16 bg-accent" />
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
@@ -58,10 +65,26 @@ export default function ContactSection() {
             </p>
             <div className="space-y-5">
               <a
+                href="tel:+919818469795"
+                className="flex items-center gap-4 group"
+                data-ocid="contact.link"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Phone className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <div className="text-sm text-muted-foreground">Phone</div>
+                  <div className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                    +91 9818469795
+                  </div>
+                </div>
+              </a>
+              <a
                 href="https://wa.me/919818469795"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
+                data-ocid="contact.link"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <MessageCircle className="w-5 h-5 text-primary" />
@@ -78,6 +101,7 @@ export default function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
+                data-ocid="contact.link"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <Linkedin className="w-5 h-5 text-primary" />
@@ -90,8 +114,9 @@ export default function ContactSection() {
                 </div>
               </a>
               <a
-                href="mailto:ravinder@procurementwala.com"
+                href="mailto:kapoor16968@gmail.com"
                 className="flex items-center gap-4 group"
+                data-ocid="contact.link"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <Mail className="w-5 h-5 text-primary" />
@@ -99,7 +124,7 @@ export default function ContactSection() {
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
                   <div className="font-semibold text-foreground group-hover:text-primary transition-colors">
-                    ravinder@procurementwala.com
+                    kapoor16968@gmail.com
                   </div>
                 </div>
               </a>
@@ -114,7 +139,7 @@ export default function ContactSection() {
           >
             <form
               onSubmit={handleSubmit}
-              className="space-y-4 bg-white p-8 rounded-2xl shadow-sm border border-border"
+              className="space-y-4 bg-muted/50 p-8 rounded-2xl border border-border"
             >
               <div>
                 <Label htmlFor="c-name">Name *</Label>
@@ -123,7 +148,7 @@ export default function ContactSection() {
                   placeholder="Your full name"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="mt-1.5"
+                  className="mt-1.5 bg-white"
                   data-ocid="contact.input"
                 />
               </div>
@@ -135,7 +160,7 @@ export default function ContactSection() {
                   placeholder="you@example.com"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="mt-1.5"
+                  className="mt-1.5 bg-white"
                   data-ocid="contact.input"
                 />
               </div>
@@ -148,7 +173,7 @@ export default function ContactSection() {
                   onChange={(e) =>
                     setForm({ ...form, company: e.target.value })
                   }
-                  className="mt-1.5"
+                  className="mt-1.5 bg-white"
                   data-ocid="contact.input"
                 />
               </div>
@@ -162,7 +187,7 @@ export default function ContactSection() {
                   onChange={(e) =>
                     setForm({ ...form, message: e.target.value })
                   }
-                  className="mt-1.5 resize-none"
+                  className="mt-1.5 resize-none bg-white"
                   data-ocid="contact.textarea"
                 />
               </div>

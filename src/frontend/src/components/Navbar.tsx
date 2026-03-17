@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 const navLinks = [
   { label: "Home", href: "#hero" },
   { label: "About", href: "#about" },
-  { label: "Book", href: "#book" },
-  { label: "Mentorship", href: "#mentorship" },
+  { label: "Programs", href: "#programs" },
+  { label: "Why Choose", href: "#why-choose" },
   { label: "Blog", href: "#blog" },
   { label: "Contact", href: "#contact" },
 ];
@@ -28,14 +28,17 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2">
-          <span className="font-display text-xl font-bold text-foreground">
-            Procurement <span className="text-primary">Wala</span>
+        <a href="#hero" className="flex flex-col justify-center">
+          <span className="font-display text-lg font-bold text-foreground leading-tight tracking-wide">
+            PROCUREMENT <span className="text-accent">WALA</span>
+          </span>
+          <span className="text-xs text-muted-foreground font-body">
+            by Ravinder Kapoor
           </span>
         </a>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-6">
+        <ul className="hidden md:flex items-center gap-5">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
@@ -54,7 +57,9 @@ export default function Navbar() {
           className="hidden md:inline-flex bg-primary text-primary-foreground hover:bg-primary/90"
           size="sm"
         >
-          <a href="#contact">Get in Touch</a>
+          <a href="#contact" data-ocid="nav.primary_button">
+            Get in Touch
+          </a>
         </Button>
 
         {/* Mobile hamburger */}
@@ -89,6 +94,7 @@ export default function Navbar() {
               setMenuOpen(false);
               window.location.hash = "contact";
             }}
+            data-ocid="nav.secondary_button"
           >
             Get in Touch
           </Button>
