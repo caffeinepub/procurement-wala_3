@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/assets/fonts/PlayfairDisplay.woff2') format('woff2');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/assets/fonts/PlusJakartaSans.woff2') format('woff2');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* White background */
+    --background: 1 0 0;
+    /* Very dark navy foreground */
+    --foreground: 0.15 0.025 255;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.025 255;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.025 255;
+    /* Navy blue primary */
+    --primary: 0.28 0.08 255;
+    --primary-foreground: 1 0 0;
+    /* Light secondary */
+    --secondary: 0.96 0.01 255;
+    --secondary-foreground: 0.15 0.025 255;
+    /* Very light blue-grey muted */
+    --muted: 0.96 0.01 255;
+    --muted-foreground: 0.45 0.03 255;
+    /* Gold accent */
+    --accent: 0.75 0.15 75;
+    --accent-foreground: 0.15 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.9 0.01 255;
+    --input: 0.9 0.01 255;
+    --ring: 0.28 0.08 255;
+    --chart-1: 0.28 0.08 255;
+    --chart-2: 0.75 0.15 75;
+    --chart-3: 0.45 0.1 255;
+    --chart-4: 0.6 0.12 255;
+    --chart-5: 0.65 0.13 75;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.15 0.025 255;
+    --sidebar-primary: 0.28 0.08 255;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.96 0.01 255;
+    --sidebar-accent-foreground: 0.15 0.025 255;
+    --sidebar-border: 0.9 0.01 255;
+    --sidebar-ring: 0.28 0.08 255;
+  }
+
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Tahoma, sans-serif;
+  }
+}
