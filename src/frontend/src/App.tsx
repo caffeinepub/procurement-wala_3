@@ -8,6 +8,7 @@ import HeroSection from "./components/HeroSection";
 import LeadMagnetSection from "./components/LeadMagnetSection";
 import MentorshipSection from "./components/MentorshipSection";
 import Navbar from "./components/Navbar";
+import OutsourcingSection from "./components/OutsourcingSection";
 import ProgramsSection from "./components/ProgramsSection";
 import StickyBottomCTA from "./components/StickyBottomCTA";
 import TestimonialsSection from "./components/TestimonialsSection";
@@ -22,6 +23,7 @@ export default function App() {
         <AboutSection />
         <ProgramsSection />
         <WhyChooseSection />
+        <OutsourcingSection />
         <BookSection />
         <MentorshipSection />
         <TestimonialsSection />

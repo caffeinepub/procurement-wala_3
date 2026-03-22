@@ -1,1 +1,84 @@
-/* Base styles — all component styling is in App.tsx <style> block */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Navy Blue primary: #0F4C81 */
+    --primary: 0.35 0.12 255;
+    --primary-foreground: 1 0 0;
+
+    /* Gold accent: #D4AF37 */
+    --accent: 0.75 0.15 75;
+    --accent-foreground: 0.15 0.04 255;
+
+    /* Backgrounds */
+    --background: 1 0 0;
+    --foreground: 0.15 0.02 255;
+
+    /* Card */
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.02 255;
+
+    /* Popover */
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.02 255;
+
+    /* Secondary — light navy tint */
+    --secondary: 0.94 0.02 255;
+    --secondary-foreground: 0.35 0.12 255;
+
+    /* Muted — light grey */
+    --muted: 0.96 0.005 255;
+    --muted-foreground: 0.5 0.02 255;
+
+    /* Destructive */
+    --destructive: 0.55 0.22 27;
+    --destructive-foreground: 1 0 0;
+
+    /* Border / Input / Ring */
+    --border: 0.9 0.01 255;
+    --input: 0.9 0.01 255;
+    --ring: 0.35 0.12 255;
+
+    /* Border radius */
+    --radius: 0.5rem;
+
+    /* Charts */
+    --chart-1: 0.35 0.12 255;
+    --chart-2: 0.75 0.15 75;
+    --chart-3: 0.55 0.14 200;
+    --chart-4: 0.65 0.18 145;
+    --chart-5: 0.6 0.2 30;
+
+    /* Sidebar */
+    --sidebar: 0.18 0.06 255;
+    --sidebar-foreground: 0.95 0.01 255;
+    --sidebar-primary: 0.75 0.15 75;
+    --sidebar-primary-foreground: 0.15 0.04 255;
+    --sidebar-accent: 0.28 0.08 255;
+    --sidebar-accent-foreground: 0.95 0.01 255;
+    --sidebar-border: 0.28 0.08 255;
+    --sidebar-ring: 0.75 0.15 75;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", "Helvetica Neue", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
