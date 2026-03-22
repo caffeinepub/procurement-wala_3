@@ -102,14 +102,18 @@ export default function HeroSection() {
           >
             <div className="relative">
               <div className="absolute -inset-3 rounded-3xl bg-primary/8" />
-              {/* Gold corner accent */}
+              {/* Gold corner accents */}
               <div className="absolute -top-2 -right-2 w-16 h-16 border-t-4 border-r-4 border-accent rounded-tr-2xl" />
               <div className="absolute -bottom-2 -left-2 w-16 h-16 border-b-4 border-l-4 border-accent rounded-bl-2xl" />
-              <div className="relative rounded-2xl overflow-hidden border-2 border-primary/20 shadow-navy">
+              {/* Rectangular image box with fixed dimensions */}
+              <div
+                className="relative rounded-2xl overflow-hidden border-2 border-primary/20 shadow-navy bg-muted"
+                style={{ width: "340px", height: "440px" }}
+              >
                 <img
                   src="/assets/generated/ravinder-kapoor-hero.dim_800x900.jpg"
                   alt="Ravinder Kapoor — Procurement Expert"
-                  className="w-full max-w-sm md:max-w-md object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               {/* Floating badge */}
