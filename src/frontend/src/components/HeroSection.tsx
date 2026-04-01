@@ -111,9 +111,9 @@ export default function HeroSection() {
                 style={{ width: "340px", height: "440px" }}
               >
                 <img
-                  src="/assets/generated/ravinder-kapoor-hero.dim_800x900.jpg"
+                  src="/assets/img_20260329_131202_812-019d46d5-f21a-7290-bcd6-743d5d0b1b01.webp"
                   alt="Ravinder Kapoor — Procurement Expert"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               {/* Floating badge */}
